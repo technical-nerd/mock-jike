@@ -1,6 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 // import Home from "../views/Home.vue";
 
+import trendRoutes from './trend/trend.router'
+import findRoutes from './find/find.router'
+
 const routes: Array<RouteRecordRaw> = [
   // {
   //   path: "/",
@@ -24,6 +27,8 @@ const routes: Array<RouteRecordRaw> = [
   //   name: "todo2",
   //   component: import("@/views/Todo2.vue")
   // }
+  ...trendRoutes,
+  ...findRoutes,
 ];
 
 const router = createRouter({

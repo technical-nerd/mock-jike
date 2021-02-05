@@ -1,0 +1,25 @@
+body {
+  background-color: #eff3f6;
+}
+
+.box-card {
+  min-height: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 12px;
+}
+
+// 两列布局
+.two-column {
+  display: flex;
+  margin-top: 20px;
+
+  .col-left {
+    width: 60%;
+  }
+
+  .col-right {
+    width: 40%;
+    padding-left: 16px;
+  }
+}
