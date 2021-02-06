@@ -1,14 +1,14 @@
 <template>
   <div class="trend-item box-card">
     <img
-        src="https://cdn.jellow.site/Fl2zFrgeU3srDEiYfR83JYI9QMyM.jpg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+        :src="trendItem.user.avatar"
         alt
         class="avatar"
     />
     <div class="content">
       <div class="head">
-        <div class="name">我掐生活狗头</div>
-        <div class="time">3小时前</div>
+        <div class="name">{{trendItem.user.name}}</div>
+        <div class="time">{{ trendItem.postTime }}</div>
       </div>
       <div class="body">
         你们觉得好的不一定是被需要的
@@ -21,7 +21,7 @@
       </div>
       <router-link class="group" to="/">
         <img src="./images/circle.svg" alt/>
-        你不知道的行业内幕
+        {{trendItem.circle.name}}
       </router-link>
       <div class="btn-group">
         <div class="agree">
@@ -41,7 +41,19 @@
 </template>
 
 <script lang="ts">
-export default {};
+
+import {defineComponent} from "vue";
+import {TrendItem} from "@/service/trend.service";
+
+export default defineComponent({
+  props:{
+    trendItem:TrendItem
+  },
+  created() {
+    console.log("...............")
+    console.log(this.trendItem)
+  }
+});
 </script>
 
 <style lang="scss">

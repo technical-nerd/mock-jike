@@ -3,49 +3,51 @@
     <div class="nav-content">
       <!-- logo -->
       <router-link to="/" class="logo">
-        <img src="@/assets/logo.png" alt />
+        <img src="@/assets/logo.png" alt/>
         <span>即刻</span>
         <span class="gray-153">Beta</span>
       </router-link>
       <!-- 动态与发现 -->
       <div class="nav-item">
-        <router-link to="/">动态</router-link>
-        <router-link to="/find">发现</router-link>
+        <router-link to="/" active-class="nav-active">动态</router-link>
+        <router-link to="/find" active-class="nav-active">发现</router-link>
       </div>
       <!-- 搜索框 -->
       <div class="search">
-        <img src="@/assets/search.svg" alt />
-        <input type="text" placeholder="搜索" />
+        <img src="@/assets/search.svg" alt/>
+        <input type="text" placeholder="搜索"/>
       </div>
       <!-- 通知信息 -->
-      <img src="@/assets/notice.svg" class="notice" alt />
+      <img src="@/assets/notice.svg" class="notice" alt/>
       <!-- 头像 -->
       <div class="avatar">
         <img
-          src="https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
-          alt
+            src="https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E"
+            alt
         />
         即友个锤子
       </div>
     </div>
   </div>
   <div class="content">
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  &>.content {
+  & > .content {
     background-color: #eff3f6;
-    max-width: 1000px;
-    margin:0 auto;
+    //max-width: 1000px;
+    width: fit-content;
+    margin: 0 auto;
   }
 }
 
 .gray-153 {
   color: rgb(153, 153, 153);
 }
+
 a {
   color: black;
   text-decoration: none;
@@ -65,6 +67,7 @@ a {
     justify-content: space-between;
     align-items: center;
   }
+
   .logo {
     width: 104px;
     height: 32px;
@@ -76,15 +79,27 @@ a {
       width: 32px;
       border-radius: 50%;
     }
+
     .gray-153 {
       font-size: 13px;
     }
   }
+
   .nav-item {
+    a{
+      color: rgb(153, 153, 153);
+    }
+
+    .nav-active {
+      color: rgb(64, 64, 64);
+      font-weight: bold;
+    }
+
     a:nth-child(1) {
       margin-right: 32px;
     }
   }
+
   .search {
     width: 464px;
     height: 32px;
@@ -98,6 +113,7 @@ a {
       width: 20px;
       margin-right: 16px;
     }
+
     input {
       flex: 1;
       border: none;
@@ -106,10 +122,12 @@ a {
       background-color: rgb(242, 245, 248);
     }
   }
+
   .notice {
     width: 24px;
     cursor: pointer;
   }
+
   .avatar {
     cursor: pointer;
     display: flex;

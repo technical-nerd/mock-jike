@@ -7,6 +7,84 @@ body {
   border-radius: 12px;
   background-color: #fff;
   margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.box-card--1 {
+  @extend .box-card;
+
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+  }
+
+  .item {
+    display: flex;
+    //align-items: center;
+    padding: 16px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #cccccc33;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      margin-right: 12px;
+    }
+
+    .content {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        margin: 0;
+      }
+
+      p:nth-child(1) {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      p:nth-child(2) {
+        font-size: 12px;
+        word-break: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgb(153, 153, 153);
+      }
+
+    }
+
+    .btn {
+      width: 60px;
+      height: 29px;
+      margin: 0;
+      font-size: 12px;
+      text-align: center;
+      line-height: 29px;
+      padding: 0;
+      background-color: rgb(255, 235, 103);
+      color: rgb(64, 64, 64);
+      border: none;
+      outline: none;
+      border-radius: 999px;
+      align-self: flex-end;
+    }
+  }
 }
 
 // 两列布局
@@ -15,11 +93,11 @@ body {
   margin-top: 20px;
 
   .col-left {
-    width: 60%;
+    width: 600px;
   }
 
   .col-right {
-    width: 40%;
+    width: 300px;
     padding-left: 16px;
   }
 }
