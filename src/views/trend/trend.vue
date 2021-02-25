@@ -52,17 +52,17 @@ import {defineComponent, ref, reactive} from "vue";
 export default {
   created() {
 
-    (async ()=>{
-      console.log(111)
-      console.log(this)
-      console.log(this.trendList)
-      this.trendList = await getAllTrend()
-      console.log(trendList)
-    })()
-
-    (()=>{
-
-    })()
+    // (async ()=>{
+    //   console.log(111)
+    //   console.log(this)
+    //   console.log(this.trendList)
+    //   this.trendList = await getAllTrend()
+    //   console.log(trendList)
+    // })()
+    //
+    // (()=>{
+    //
+    // })()
 
 
   },

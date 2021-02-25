@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-// import Home from "../views/Home.vue";
 
 import trendRoutes from './trend/trend.router'
 import findRoutes from './find/find.router'
@@ -18,16 +17,13 @@ const routes: Array<RouteRecordRaw> = [
   //   // which is lazy-loaded when the route is visited.
   //   component: () =>
   //     import(/* webpackChunkName: "about" */ "../views/About.vue")
-  // }, {
-  //   path: "/todo1",
-  //   name: "todo1",
-  //   component: import("@/views/Todo1.vue")
-  // }, {
-  //   path: "/todo2",
-  //   name: "todo2",
-  //   component: import("@/views/Todo2.vue")
   // }
-  ...trendRoutes,
+  {
+    path:'/demo',
+    name :'Demo',
+    component:()=>import('./demo/Demo.vue')
+  },
+  // ...trendRoutes,
   ...findRoutes,
 ];
 
