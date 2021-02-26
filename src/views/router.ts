@@ -23,7 +23,12 @@ const routes: Array<RouteRecordRaw> = [
     name :'Demo',
     component:()=>import('./demo/Demo.vue')
   },
-  // ...trendRoutes,
+  {
+    path: '/me',
+    name:'Me',
+    component:()=>import('./me.vue')
+  },
+  ...trendRoutes,
   ...findRoutes,
 ];
 

@@ -1,13 +1,9 @@
 <template>
   <div class="trend-item box-card">
-    <img
-        :src="trendItem.user.avatar"
-        alt
-        class="avatar"
-    />
+    <img class="avatar" :src="trendItem.avatar" alt/>
     <div class="content">
       <div class="head">
-        <div class="name">{{trendItem.user.name}}</div>
+        <div class="name">{{ trendItem.name }}</div>
         <div class="time">{{ trendItem.postTime }}</div>
       </div>
       <div class="body">
@@ -21,7 +17,7 @@
       </div>
       <router-link class="group" to="/">
         <img src="./images/circle.svg" alt/>
-        {{trendItem.circle.name}}
+        {{ trendItem.circleName }}
       </router-link>
       <div class="btn-group">
         <div class="agree">
@@ -43,14 +39,16 @@
 <script lang="ts">
 
 import {defineComponent} from "vue";
-import {TrendItem} from "@/service/trend.service";
+import {TrendItem} from "@/components/trend-item/trend-item";
 
 export default defineComponent({
-  props:{
-    trendItem:TrendItem
+  props: {
+    trendItem: {
+      type:TrendItem,
+      require:true
+    }
   },
   created() {
-    console.log("...............")
     console.log(this.trendItem)
   }
 });

@@ -1,7 +1,6 @@
 <template>
   <div class="two-column">
     <div class="col-left">
-      <!--<trend-item v-for="(item,index) in trendList" :key="index" trend-item="item"></trend-item>-->
       <template v-for="(item,index) in trendList" :key="index">
         <trend-item :trend-item="item"></trend-item>
       </template>
@@ -10,9 +9,7 @@
       <!-- 用户信息 -->
       <div class="user-info box-card">
         <div class="bg"></div>
-        <img class="avatar"
-             src="https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/300x300%3E"
-             alt="">
+        <router-link class="avatar" to="/me"></router-link>
         <div class="content">
           <div class="name">即友个锤子</div>
           <div class="detail">
@@ -45,40 +42,31 @@
 </template>
 
 <script lang="ts">
-// export default {}
-import {getAllTrend} from "@/service/trend.service";
+
 import {defineComponent, ref, reactive} from "vue";
+import {TrendItem} from "@/components/trend-item/trend-item";
 
-export default {
+export default defineComponent({
   created() {
-
-    // (async ()=>{
-    //   console.log(111)
-    //   console.log(this)
-    //   console.log(this.trendList)
-    //   this.trendList = await getAllTrend()
-    //   console.log(trendList)
-    // })()
-    //
-    // (()=>{
-    //
-    // })()
-
-
+    this.loadData();
   },
   data() {
+    var trendList: TrendItem[] = new Array(10);
     return {
-      trendList:null
+      trendList
+    }
+  },
+  methods: {
+    loadData() {
+      this.trendList.fill({
+        avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E',
+        name: '寻茶',
+        circleName: 'JitHub',
+        postTime: '2020-01-02',
+      })
     }
   }
-  // setup() {
-  // let trendList=await getAllTrend()
-  // console.log(trendList)
-  // return {
-  //   trendList:reactive(trendList)
-  // }
-  // }
-};
+});
 </script>
 
 <style lang="scss">
@@ -93,12 +81,16 @@ export default {
   }
 
   .avatar {
+    display: block;
+    height: 60px;
     width: 60px;
     border-radius: 50%;
     border: 2px solid white;
     position: absolute;
     top: 98px;
     left: 20px;
+    background: url("https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/300x300%3E")  no-repeat ;
+    background-size: cover;
   }
 
   .content {

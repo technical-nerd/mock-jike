@@ -1,7 +1,9 @@
 <template>
   <div class="two-column">
     <div class="col-left">
-      <trend-item v-for="i in 10"></trend-item>
+      <template v-for="(item,index) in trendList" :key="index">
+        <trend-item :trend-item="item"></trend-item>
+      </template>
     </div>
     <div class="col-right">
       <!--发现即友-->
@@ -37,7 +39,30 @@
 </template>
 
 <script lang="ts">
-export default {}
+import {defineComponent} from "vue";
+import {TrendItem} from "@/components/trend-item/trend-item";
+
+export default defineComponent({
+  data() {
+    var trendList: TrendItem[] = new Array(10);
+    return {
+      trendList
+    }
+  },
+  created() {
+    this.loadData();
+  },
+  methods: {
+    loadData() {
+      this.trendList.fill({
+        avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E',
+        name: '寻茶',
+        circleName: 'JitHub',
+        postTime: '2020-01-02',
+      })
+    }
+  }
+})
 </script>
 
 <style lang="scss">
