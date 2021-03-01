@@ -40,7 +40,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import {TrendItem} from "@/components/trend-item/trend-item";
+import {TrendItem} from "@/views/components/trend-item/trend-item";
 
 export default defineComponent({
   data() {

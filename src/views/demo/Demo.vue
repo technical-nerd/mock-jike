@@ -1,8 +1,6 @@
 <template>
   <h1>demo.vue</h1>
-  <div class="a">
-    <div class="b"></div>
-  </div>
+  <div class="logo"></div>
 </template>
 
 <script>
@@ -11,8 +9,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.a .b{
-  color: red;
-}
+<style scoped lang="scss">
+  .logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('');
+  }
 </style>

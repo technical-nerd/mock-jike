@@ -16,7 +16,7 @@
         <br/>
       </div>
       <router-link class="group" to="/">
-        <img src="./images/circle.svg" alt/>
+        <img src="../../../assets/images/circle.svg" alt/>
         {{ trendItem.circleName }}
       </router-link>
       <div class="btn-group">
@@ -32,16 +32,17 @@
         </div>
       </div>
     </div>
-    <img src="./images/arrow.svg" alt class="arrow"/>
+    <img src="../../../assets/images/arrow.svg" alt class="arrow"/>
   </div>
 </template>
 
 <script lang="ts">
 
 import {defineComponent} from "vue";
-import {TrendItem} from "@/components/trend-item/trend-item";
+import {TrendItem} from "@/views/components/trend-item/trend-item";
 
 export default defineComponent({
+  name:'trend-item',
   props: {
     trendItem: {
       type:TrendItem,
@@ -122,19 +123,19 @@ export default defineComponent({
 
       .agree {
         button {
-          background-image: url('./images/agree.svg');
+          background-image: url('../../../assets/images/agree.svg');
         }
       }
 
       .comment {
         button {
-          background-image: url('./images/comment.svg');
+          background-image: url('../../../assets/images/comment.svg');
         }
       }
 
       .share {
         button {
-          background-image: url('./images/share.svg');
+          background-image: url('../../../assets/images/share.svg');
         }
       }
 

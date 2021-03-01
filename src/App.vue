@@ -3,7 +3,7 @@
     <div class="inner">
       <!--  logo -->
       <router-link class="logo" to="/">
-        <img class="img" src="@/assets/logo.png" alt/>
+        <img class="img" src="@/assets/images/logo.png" alt/>
         <div class="text">
           <span>即刻</span>
           <span class="gray">Beta</span>
@@ -67,7 +67,6 @@ export default defineComponent({
     justify-content: space-around;
     align-items: center;
     height: 56px;
-
   }
 }
 
@@ -129,7 +128,7 @@ export default defineComponent({
   .icon {
     width: 20px;
     height: 20px;
-    background: url('~@/assets/search.svg') no-repeat;
+    background: url('~@/assets/images/search.svg') no-repeat;
     margin-right: 16px;
   }
 
@@ -157,7 +156,7 @@ export default defineComponent({
     outline: none;
     margin: 0 32px 0 0;
     padding: 0;
-    background: url("~@/assets/notice.svg") no-repeat;
+    background: url("~@/assets/images/notice.svg") no-repeat;
     cursor: pointer;
   }
 
