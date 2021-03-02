@@ -49,14 +49,14 @@ import T from '@/views/components/trend-item/trend-item.vue';
 
 
 export default defineComponent({
-  components:{
-    'trend-item':T
+  components: {
+    'trend-item': T
   },
   created() {
     this.loadData();
   },
   data() {
-    var trendList: TrendItem[] = new Array(10);
+    var trendList = new Array<TrendItem>(10);
     return {
       trendList
     }
@@ -64,17 +64,23 @@ export default defineComponent({
   methods: {
     loadData() {
       this.trendList.fill({
-        avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E',
-        name: '寻茶',
-        circleName: 'JitHub',
-        postTime: '2020-01-02',
-      })
+        user: {
+          name: '寻茶',
+          avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E'
+        },
+        group: {
+          name: 'JitHub'
+        },
+        trend: {
+          publishTime: '2020-01-02'
+        }
+      });
     }
   }
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .user-info {
   position: relative;
 
@@ -94,7 +100,7 @@ export default defineComponent({
     position: absolute;
     top: 98px;
     left: 20px;
-    background: url("https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/300x300%3E")  no-repeat ;
+    background: url("https://cdn.jellow.site/FmI_vA5gY8zJ7kSaTKr9NBnduH0E?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/300x300%3E") no-repeat;
     background-size: cover;
   }
 

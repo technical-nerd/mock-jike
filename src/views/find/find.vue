@@ -41,8 +41,12 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import {TrendItem} from "@/views/components/trend-item/trend-item";
+import TrendItemC from '@/views/components/trend-item/trend-item.vue'
 
 export default defineComponent({
+  components:{
+    'trend-item':TrendItemC
+  },
   data() {
     var trendList: TrendItem[] = new Array(10);
     return {
@@ -55,16 +59,23 @@ export default defineComponent({
   methods: {
     loadData() {
       this.trendList.fill({
-        avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E',
-        name: '寻茶',
-        circleName: 'JitHub',
-        postTime: '2020-01-02',
-      })
+        user: {
+          name: '寻茶',
+          avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E'
+        },
+        group: {
+          name: 'JitHub'
+        },
+        trend: {
+          publishTime: '2020-01-02'
+        }
+      });
+
     }
   }
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

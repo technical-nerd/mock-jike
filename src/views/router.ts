@@ -4,12 +4,12 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "",
         name: "trend",
-        component: import("./trend/trend.vue")
+        component: () => import("./trend/trend.vue")
     },
     {
         path: "/find",
         name: "find",
-        component: import("./find/find.vue")
+        component: () => import("./find/find.vue")
     },
     {
         path: '/demo',

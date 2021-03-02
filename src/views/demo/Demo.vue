@@ -9,10 +9,10 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  .logo {
-    width: 100px;
-    height: 100px;
-    background-image: url('');
-  }
+<style lang="scss" scoped>
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url('~@images/agree.svg');
+}
 </style>

@@ -1,6 +1,9 @@
-export class TrendItem{
-     avatar?: string;
-     name?: string;
-     postTime?: string;
-     circleName?: string;
+import {Trend} from "@/service/trend";
+import {User} from '@/service/user';
+import {Group} from "@/service/group";
+
+export class TrendItem {
+    user?: User;
+    trend?: Trend;
+    group?: Group;
 }

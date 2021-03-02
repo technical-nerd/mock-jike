@@ -1,10 +1,10 @@
 <template>
   <div class="trend-item box-card">
-    <img class="avatar" :src="trendItem.avatar" alt/>
+    <img class="avatar" :src="trendItem.user.avatar" alt/>
     <div class="content">
       <div class="head">
-        <div class="name">{{ trendItem.name }}</div>
-        <div class="time">{{ trendItem.postTime }}</div>
+        <div class="name">{{ trendItem.user.name }}</div>
+        <div class="time">{{ trendItem.trend.publishTime }}</div>
       </div>
       <div class="body">
         你们觉得好的不一定是被需要的
@@ -17,7 +17,7 @@
       </div>
       <router-link class="group" to="/">
         <img src="../../../assets/images/circle.svg" alt/>
-        {{ trendItem.circleName }}
+        {{ trendItem.group.name }}
       </router-link>
       <div class="btn-group">
         <div class="agree">
@@ -38,24 +38,23 @@
 
 <script lang="ts">
 
-import {defineComponent} from "vue";
+import {defineComponent, PropType} from "vue";
 import {TrendItem} from "@/views/components/trend-item/trend-item";
 
+
 export default defineComponent({
-  name:'trend-item',
+  name: 'trend-item',
   props: {
-    trendItem: {
-      type:TrendItem,
-      require:true
-    }
+    trendItem: Object as () => TrendItem
+    // trendItem:Object as PropType<TrendItem>,
   },
   created() {
-    console.log(this.trendItem)
+
   }
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .trend-item {
   font-size: 14px;
   padding: 24px;
