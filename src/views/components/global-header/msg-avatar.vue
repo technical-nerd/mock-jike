@@ -1,7 +1,7 @@
 <template>
   <div class="msg-avatar">
     <button class="msg" @click.stop="msgListVisible=!msgListVisible"></button>
-    <div class="msg-list box-card" v-show="msgListVisible" ref="msgList" @click.stop>
+    <div class="msg-list u-box" v-show="msgListVisible" ref="msgList" @click.stop>
       <div class="item" v-for="i in 20" :key="i">
         <div class="item__col">
           <div class="detail">

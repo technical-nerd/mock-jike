@@ -7,7 +7,7 @@
     </div>
     <div class="col-right">
       <!-- 用户信息 -->
-      <div class="user-info box-card">
+      <div class="user-info u-box">
         <div class="bg"></div>
         <router-link class="avatar" to="/me"></router-link>
         <div class="content">
@@ -19,7 +19,7 @@
         </div>
       </div>
       <!-- 我的圈子 -->
-      <div class="my-circle box-card--1">
+      <div class="my-circle u-box--1">
         <div class="title">我的圈子</div>
         <div class="item" v-for="i in 7">
           <img class="logo"

@@ -2,7 +2,9 @@ body {
   background-color: #eff3f6;
 }
 
-.box-card {
+// TODO: continue css rename
+
+.u-box {
   min-height: 20px;
   border-radius: 12px;
   background-color: #fff;
@@ -11,8 +13,8 @@ body {
   box-shadow: rgb(0 0 0 / 4%) 0px 1px 3px, rgb(0 0 0 / 10%) 0px 2px 15px;
 }
 
-.box-card--1 {
-  @extend .box-card;
+.u-box--1 {
+  @extend .u-box;
 
   .title {
     font-size: 16px;

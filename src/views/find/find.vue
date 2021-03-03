@@ -7,7 +7,7 @@
     </div>
     <div class="col-right">
       <!--发现即友-->
-      <div class="box-card--1">
+      <div class="u-box--1">
         <div class="title">发现即友</div>
         <div class="item" v-for="i in 4">
           <img class="logo"
@@ -22,7 +22,7 @@
       </div>
 
       <!--  圈子推荐 -->
-      <div class="box-card--1">
+      <div class="u-box--1">
         <div class="title">圈子推荐</div>
         <div class="item" v-for="i in 4">
           <img class="logo"

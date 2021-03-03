@@ -1,5 +1,5 @@
 <template>
-  <div class="trend-item box-card">
+  <div class="trend-item u-box">
     <img class="avatar" :src="trendItem.user.avatar" alt/>
     <div class="content">
       <div class="head">

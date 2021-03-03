@@ -18,7 +18,7 @@
       <div class="search">
         <div class="icon"></div>
         <input class="input" placeholder="搜索" v-model="searchInput"/>
-        <div class="search__prompt box-card--1" @ref="searchPrompt" @click.stop v-show="searchPromptVisible">
+        <div class="search__prompt u-box--1" @ref="searchPrompt" @click.stop v-show="searchPromptVisible">
           <div class="item">123</div>
           <div class="item">12306</div>
           <div class="item">123456</div>
