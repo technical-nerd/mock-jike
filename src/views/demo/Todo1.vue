@@ -66,4 +66,4 @@ export default defineComponent({
   },
 });
 </script>
-<style src="@/views/Todo.scss" lang="scss"></style>
+<style src="/@/views/Todo.scss" lang="scss"></style>

@@ -8,7 +8,7 @@
 </template>
 <script lang="ts">
 import {defineComponent} from "vue";
-import GlobalHeader from '@/views/components/global-header/global-header.vue'
+import GlobalHeader from '/@/views/components/global-header/global-header.vue'
 
 export default defineComponent({
   components: {

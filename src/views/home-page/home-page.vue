@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue";
-import {TrendItem} from "@/views/components/trend-item/trend-item";
+import {TrendItem} from "/@/views/components/trend-item/trend-item";
 
 export default defineComponent({
   name: "me",
@@ -132,7 +132,7 @@ export default defineComponent({
     .more {
       width: 36px;
       border-radius: 50%;
-      background-image: url('~@/assets/images/more.svg');
+      background-image: url('~/@/assets/images/more.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 60%;

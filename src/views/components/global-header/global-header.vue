@@ -3,7 +3,7 @@
     <div class="inner">
       <!--  logo -->
       <router-link class="logo" to="/">
-        <img class="img" src="@/assets/images/logo.png" alt/>
+        <img class="img" src="/@/assets/images/logo.png" alt/>
         <div class="text">
           <span>即刻</span>
           <span class="gray">Beta</span>
@@ -144,7 +144,7 @@ export default defineComponent({
   .icon {
     width: 20px;
     height: 20px;
-    background: url('~@/assets/images/search.svg') no-repeat;
+    background: url('/@/assets/images/search.svg') no-repeat;
     margin-right: 16px;
   }
 

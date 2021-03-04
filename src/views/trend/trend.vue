@@ -44,8 +44,8 @@
 <script lang="ts">
 
 import {defineComponent, ref, reactive} from "vue";
-import {TrendItem} from "@/views/components/trend-item/trend-item";
-import T from '@/views/components/trend-item/trend-item.vue';
+import {TrendItem} from "/@/views/components/trend-item/trend-item";
+import T from '/@/views/components/trend-item/trend-item.vue';
 
 
 export default defineComponent({
