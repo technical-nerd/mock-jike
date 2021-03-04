@@ -19,9 +19,9 @@
         </div>
       </div>
       <!-- 我的圈子 -->
-      <div class="my-circle u-box--1">
-        <div class="title">我的圈子</div>
-        <div class="item" v-for="i in 7">
+      <div class="my-circle u-box">
+        <div class="u-box__title">我的圈子</div>
+        <div class="u-box__item" v-for="i in 7">
           <img class="logo"
                src="https://cdn.jellow.site/lsqmD2VC9pJBQzjRz-eqvh4N8hFH.png?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/300x300%3E"
                alt="">
@@ -121,7 +121,38 @@ export default defineComponent({
 }
 
 .my-circle {
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 12px;
+  }
 
+  .content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    p {
+      margin: 0;
+    }
+
+    p:nth-child(1) {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    p:nth-child(2) {
+      font-size: 12px;
+      word-break: normal;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: rgb(153, 153, 153);
+    }
+
+  }
 }
 </style>

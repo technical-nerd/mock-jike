@@ -7,9 +7,8 @@ const resolve = dir => require('path').join(__dirname, dir);
 module.exports = {
     resolve: {
         alias: {
-            '@': resolve('src/'),
-            // '@images':'@/assets/images/',
-            '@images':resolve('src/assets/images/'),
+            '/Views': resolve('src/views/'),
+            '/Images':resolve('src/assets/images/'),
         }
     }
 };

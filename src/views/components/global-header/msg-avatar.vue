@@ -62,7 +62,7 @@ export default defineComponent({
     outline: none;
     margin: 0 32px 0 0;
     padding: 0;
-    background: url("~/@/assets/images/notice.svg") no-repeat;
+    background: url("/Images/notice.svg") no-repeat;
     cursor: pointer;
   }
 

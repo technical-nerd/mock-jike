@@ -144,7 +144,7 @@ export default defineComponent({
   .icon {
     width: 20px;
     height: 20px;
-    background: url('/@/assets/images/search.svg') no-repeat;
+    background: url('/Images/search.svg') no-repeat;
     margin-right: 16px;
   }
 
