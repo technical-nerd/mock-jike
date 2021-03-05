@@ -1,11 +1,11 @@
 <template>
-  <div class="two-column">
-    <div class="col-left">
+  <div class="u-cols-2">
+    <div class="u-cols-2__left">
       <template v-for="(item,index) in trendList" :key="index">
         <trend-item :trend-item="item"></trend-item>
       </template>
     </div>
-    <div class="col-right">
+    <div class="u-cols-2__right">
       <!-- 用户信息 -->
       <div class="user-info u-box">
         <div class="bg"></div>
@@ -44,7 +44,7 @@
 <script lang="ts">
 
 import {defineComponent, ref, reactive} from "vue";
-import {TrendItem} from "/@/views/components/trend-item/trend-item";
+import {TrendItem} from "/Views/components/trend-item/trend-item";
 import T from '/@/views/components/trend-item/trend-item.vue';
 
 

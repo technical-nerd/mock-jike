@@ -24,8 +24,8 @@
   <!--<div class="me-tabs">-->
   <!--  -->
   <!--</div>-->
-  <div class="two-column">
-    <div class="col-left">
+  <div class="u-cols-2">
+    <div class="u-cols-2__left">
       <!--  动态列表-->
       <template v-for="(item,index) in trendList" :key="index">
         <trend-item :trend-item="item"></trend-item>

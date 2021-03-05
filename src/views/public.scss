@@ -1,5 +1,6 @@
 body {
   background-color: #eff3f6;
+  margin: 0;
 }
 
 // TODO: continue css rename
@@ -33,35 +34,19 @@ body {
       border: none;
     }
 
-    .btn {
-      width: 60px;
-      height: 29px;
-      margin: 0;
-      font-size: 12px;
-      text-align: center;
-      line-height: 29px;
-      padding: 0;
-      background-color: rgb(255, 235, 103);
-      color: rgb(64, 64, 64);
-      border: none;
-      outline: none;
-      border-radius: 999px;
-      align-self: flex-end;
-    }
   }
 }
 
 
 // 两列布局
-.two-column {
+.u-cols-2 {
   display: flex;
-  //margin-top: 20px;
 
-  .col-left {
+  &__left {
     width: 600px;
   }
 
-  .col-right {
+  &__right {
     width: 300px;
     padding-left: 16px;
   }
