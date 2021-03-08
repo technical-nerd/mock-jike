@@ -1,9 +1,33 @@
 <template>
   <div class="u-cols-2">
     <div class="u-cols-2__left">
-      <template v-for="(item,index) in trendList" :key="index">
-        <trend-item :trend-item="item"></trend-item>
-      </template>
+      <!--发布动态-->
+      <div class="publish-trend u-box">
+        <div class="publish-trend__input">
+          <textarea class="textarea"></textarea>
+          <div class="choice-group">
+            <img class="choice-group__img" src="/Images/circle.svg" alt="">
+            <div class="choice-group__input">
+              <span>未选择圈子</span>
+              <img src="/Images/right-arrow.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="publish-trend__tools">
+          <div class="icons">
+            <div class="img">
+              <img src="/Images/image.svg" alt="">
+              <span>图片</span>
+            </div>
+            <div class="link">
+              <img src="/Images/link.svg" alt="">
+              <span>链接</span>
+            </div>
+          </div>
+          <button class="publish">发布</button>
+        </div>
+      </div>
+      <trend-list></trend-list>
     </div>
     <div class="u-cols-2__right">
       <!-- 用户信息 -->
@@ -44,43 +68,119 @@
 <script lang="ts">
 
 import {defineComponent, ref, reactive} from "vue";
-import {TrendItem} from "/Views/components/trend-item/trend-item";
-import T from '/@/views/components/trend-item/trend-item.vue';
-
+import TrendList from '/Views/components/trend-list.vue'
 
 export default defineComponent({
   components: {
-    'trend-item': T
+    'trend-list': TrendList
   },
   created() {
     this.loadData();
   },
   data() {
-    var trendList = new Array<TrendItem>(10);
-    return {
-      trendList
-    }
+    return {}
   },
   methods: {
     loadData() {
-      this.trendList.fill({
-        user: {
-          name: '寻茶',
-          avatar: 'https://cdn.jellow.site/Fs3Dtv680g4_tmm12WpqNbffzVgV.jpeg?imageMogr2/auto-orient/heic-exif/1/format/jpeg/thumbnail/120x120%3E'
-        },
-        group: {
-          name: 'JitHub'
-        },
-        trend: {
-          publishTime: '2020-01-02'
-        }
-      });
+
     }
   }
 });
 </script>
 
 <style lang="scss" scoped>
+.publish-trend {
+  padding: 16px;
+
+  &__input {
+    padding: 16px;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 8px;
+
+    .textarea {
+      resize: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      width: 100%;
+      height: 120px;
+    }
+
+    .choice-group {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      margin-top: 12px;
+
+      &__img {
+
+      }
+
+      &__input {
+        color: rgb(64, 64, 64);
+        font-size: 14px;
+
+        span {
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+
+        img {
+          width: 12px;
+          height: 12px;
+        }
+
+      }
+    }
+
+  }
+
+  &__tools {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    .img {
+      margin-right: 48px;
+    }
+
+    .link {
+      justify-self: flex-start;
+      align-self: flex-start;
+    }
+
+    .img, .link {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .publish {
+      border: none;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      width: 76px;
+      height: 32px;
+      font-size: 14px;
+      background-color: rgb(255, 241, 147);
+      border-radius: 999px;
+    }
+  }
+}
+
 .user-info {
   position: relative;
 

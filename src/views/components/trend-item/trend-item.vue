@@ -1,5 +1,5 @@
 <template>
-  <div class="trend-item u-box">
+  <router-link class="trend-item u-box" to="/trend-detail">
     <img class="avatar" :src="trendItem.user.avatar" alt/>
     <div class="content">
       <div class="head">
@@ -16,7 +16,7 @@
         <br/>
       </div>
       <router-link class="group" to="/">
-        <img src="../../../assets/images/circle.svg" alt/>
+        <img src="/Images/circle.svg" alt/>
         {{ trendItem.group.name }}
       </router-link>
       <div class="btn-group">
@@ -32,8 +32,8 @@
         </div>
       </div>
     </div>
-    <img src="../../../assets/images/arrow.svg" alt class="arrow"/>
-  </div>
+    <img src="/Images/arrow.svg" alt class="arrow"/>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -59,6 +59,13 @@ export default defineComponent({
   font-size: 14px;
   padding: 24px;
   display: flex;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgb(248, 250, 251);
+  }
 
   .avatar {
     width: 40px;

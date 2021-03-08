@@ -4,22 +4,27 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: "",
         name: "trend",
-        component: () => import("./trend/trend.vue")
+        component: () => import("/Views/trend.vue")
+    },
+    {
+        path:'/trend-detail',
+        name:'trend-detail',
+        component:()=>import('/Views/trend-detail.vue')
     },
     {
         path: "/find",
         name: "find",
-        component: () => import("./find/find.vue")
+        component: () => import("/Views//find.vue")
     },
     {
         path: '/demo',
         name: 'Demo',
-        component: () => import('./demo/Demo.vue')
+        component: () => import('/Views/demo/Demo.vue')
     },
     {
         path: '/me',
         name: 'HomePage',
-        component: () => import('./home-page/home-page.vue')
+        component: () => import('/Views//home-page.vue')
     },
 ];
 
